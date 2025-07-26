@@ -1,0 +1,127 @@
+/* src/index.css */
+
+/* Reset CSS básico para una base consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Variables de color */
+  --primary-color: #4A90E2; /* Azul vibrante */
+  --secondary-color: #50E3C2; /* Turquesa */
+  --accent-color: #F5A623; /* Naranja */
+  --text-color: #333333;
+  --text-light-color: #666666;
+  --background-color: #F8F8F8;
+  --white-color: #FFFFFF;
+  --border-color: #E0E0E0;
+  --error-color: #D0021B;
+
+  /* Tipografía */
+  --font-family-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.6;
+
+  /* Espaciado */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 1rem;   /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem;   /* 32px */
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+/* Estilos base para formularios */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="datetime-local"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3C7DCF; /* Un tono más oscuro del primary-color */
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-light-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem; /* 14px */
+  margin-top: -0.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Estilos para contenedores de páginas */
+.page-container {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}

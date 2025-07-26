@@ -1,0 +1,46 @@
+.listContainer {
+  background-color: var(--white-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.listContainer h3 {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-sm);
+}
+
+.userTable th,
+.userTable td {
+  border: 1px solid var(--border-color);
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.userTable th {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.userTable tr:nth-child(even) {
+  background-color: #f9f9f9; /* Color de fila alterno */
+}
+
+.userTable tr:hover {
+  background-color: #f0f0f0; /* Efecto hover en las filas */
+}
+
+.noUsersMessage {
+  text-align: center;
+  color: var(--text-light-color);
+  padding: var(--spacing-md);
+}
