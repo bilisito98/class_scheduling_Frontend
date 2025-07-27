@@ -2,10 +2,9 @@
 import { createContext, useContext, useState, useEffect, useMemo } from 'react';
 import api from '../services/api';
 
-// Crear contexto de autenticación
+
 const AuthContext = createContext();
 
-// Componente proveedor del contexto
 export function AuthProvider({ children }) {
   const [token, setTokenState] = useState(() => localStorage.getItem('token') || null);
 
@@ -31,14 +30,14 @@ export function AuthProvider({ children }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-// Hook personalizado para usar el contexto
+
 export function useAuth() {
   const context = useContext(AuthContext);
   if (!context) throw new Error('useAuth debe usarse dentro de un <AuthProvider>');
   return context;
 }
 
-// Funciones auxiliares para manejar token fuera del hook
+
 export function login(token) {
   localStorage.setItem('token', token);
   api.defaults.headers.common.Authorization = `Bearer ${token}`;
