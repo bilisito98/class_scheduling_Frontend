@@ -36,13 +36,3 @@ export function useAuth() {
   if (!context) throw new Error('useAuth debe usarse dentro de un <AuthProvider>');
   return context;
 }
-
-
-export function login(token) {
-  localStorage.setItem('token', token);
-  api.defaults.headers.common.Authorization = `Bearer ${token}`;
-}
-
-export function getToken() {
-  return localStorage.getItem('token');
-}
